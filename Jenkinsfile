@@ -11,12 +11,7 @@ pipeline{
                 sh 'mvn clean install'
             }
          }
-        stage('SonarQube analysis') {
-        steps{
-        withSonarQubeEnv('Sonarqube') { 
-        sh "mvn sonar:sonar"
-    }
-        }
+       
         }
        
     }
